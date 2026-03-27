@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Cricket Landing Page</title><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color:#fff;
+    text-align:center;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    margin-top:40px;
+    padding:25px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 25px rgba(0,0,0,0.5);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.badge{
+    display:inline-block;
+    background:red;
+    padding:5px 12px;
+    border-radius:6px;
+    font-size:12px;
+    margin:10px 0;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+.count{
+    margin:15px 0;
+    font-size:18px;
+    color:#00ffcc;
+}
+
+.price-box{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.price-box del{
+    color:#ccc;
+    margin-right:10px;
+}
+
+.price-box span{
+    color:#00ffcc;
+    font-weight:bold;
+    font-size:24px;
+}
+
+.timer{
+    margin:10px 0;
+    color:#ffcc00;
+    font-weight:bold;
+}
+
+.btn{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.join{
+    background:linear-gradient(45deg,#28a745,#00c853);
+    color:#fff;
+}
+
+.buy{
+    background:linear-gradient(45deg,#ff9800,#ff5722);
+    color:#fff;
+}
+
+.telegram{
+    background:linear-gradient(45deg,#0088cc,#00bcd4);
+    color:#fff;
+}
+
+.hidden{
+    display:none;
+}
+
+.proof{
+    margin-top:15px;
+    font-size:14px;
+    opacity:0.8;
+}
+
+.float{
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+
+.buyers{
+    margin-top:20px;
+    text-align:left;
+    font-size:14px;
+    background: rgba(0,0,0,0.3);
+    padding:10px;
+    border-radius:10px;
+    height:120px;
+    overflow:hidden;
+}
+
+.buyers p{
+    animation: scrollUp 10s linear infinite;
+    margin:5px 0;
+}
+
+@keyframes scrollUp{
+    0%{transform:translateY(100%)}
+    100%{transform:translateY(-100%)}
+}
+</style></head><body><div class="container">
+    <div class="card float">
+        <h1>🔥 VIP Cricket Tips</h1>
+        <div class="badge">95% जीत Rate</div><p class="count">⏳ Only <span id="seats">23</span> seats left</p>
+
+    <div class="price-box">
+        <del>₹999</del>
+        <span>₹499</span>
+    </div>
+
+    <div class="timer">⏰ Offer ends in <span id="time">05:00</span></div>
+
+    <button class="btn join" onclick="fakeJoin()">👉 Join VIP Now</button>
+
+    <button class="btn buy hidden" id="buyBtn" onclick="payNow()">💰 Pay Now ₹499</button>
+
+    <a href="https://shorturl.at/PJ1qu" target="_blank">
+        <button class="btn telegram">💬 Join Telegram</button>
+    </a>
+
+    <div class="buyers">
+        <p>🟢 Rahul just joined</p>
+        <p>🟢 Amit purchased VIP</p>
+        <p>🟢 Suresh joined VIP</p>
+        <p>🟢 Priya bought access</p>
+        <p>🟢 Rohit joined VIP</p>
+        <p>🟢 Neha purchased VIP</p>
+        <p>🟢 Aman joined VIP</p>
+        <p>🟢 Vikash bought access</p>
+        <p>🟢 Karan joined VIP</p>
+    …
